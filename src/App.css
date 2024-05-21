@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #e0f7fa;
+    color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 25px;
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    transition: transform 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app:hover {
+    transform: translateY(-5px);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 {
+    color: #00796b;
+    margin-bottom: 25px;
+    font-size: 1.8em;
 }
 
-.App-link {
-  color: #61dafb;
+.app__inputs {
+    margin-bottom: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app__inputs label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #00796b;
+}
+
+.app__inputs input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #00796b;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.app__inputs input:focus {
+    border-color: #004d40;
+    box-shadow: 0 0 8px rgba(0, 77, 64, 0.2);
+}
+
+.app__inputs button {
+    padding: 12px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #00796b;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.app__inputs button:hover {
+    background-color: #004d40;
+    box-shadow: 0 4px 15px rgba(0, 77, 64, 0.2);
+}
+
+.app__results p {
+    font-size: 1.4em;
+    color: #00796b;
+}
+
+.app__results img {
+    margin-top: 25px;
+    max-width: 100%;
+    border: 2px solid #00796b;
+    border-radius: 12px;
+}
+
+.app__names {
+    margin-top: 30px;
+    font-size: 1em;
+    color: #004d40;
+    font-style: italic;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .app {
+        padding: 20px;
+    }
+    
+    .app__inputs input, .app__inputs button {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+    
+    .app__inputs button {
+        margin: 5px;
+    }
+    
+    .app__results p {
+        font-size: 1.2em;
+    }
 }
